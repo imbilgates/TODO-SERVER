@@ -1,4 +1,4 @@
-import mongoose from 'mongoose';
+import mongoose from "mongoose";
 
 const todoSchema = new mongoose.Schema(
   {
@@ -10,10 +10,14 @@ const todoSchema = new mongoose.Schema(
       type: Boolean,
       default: false,
     },
+    reminderAt: {
+      type: Date, 
+      default: null,
+    },
   },
   { timestamps: true }
 );
 
-const Todo = mongoose.model('Todo', todoSchema);
+const Todo = mongoose.model("Todo", todoSchema);
 
 export default Todo;
